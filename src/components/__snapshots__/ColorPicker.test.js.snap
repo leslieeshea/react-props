@@ -22,8 +22,5 @@ exports[`ColorPicker Component renders a ColorPicker 1`] = `
   >
     Blue
   </button>
-  <div
-    className=""
-  />
 </section>
 `;

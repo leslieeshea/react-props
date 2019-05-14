@@ -8,10 +8,24 @@ describe('ColorPicker Component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('changes color to red on button press', () => {
+  it('handles the red button press', () => {
+    console.log = jest.fn();
     const wrapper = shallow(<ColorPicker />);
     wrapper.find('button').at(0).simulate('click');
+    expect(console.log).toHaveBeenCalledWith('red');
+  });
 
-    expect(wrapper.state('color')).toEqual('red');
+  it('handles the yellow button press', () => {
+    console.log = jest.fn();
+    const wrapper = shallow(<ColorPicker />);
+    wrapper.find('button').at(1).simulate('click');
+    expect(console.log).toHaveBeenCalledWith('yellow');
+  });
+
+  it('handles the blue button press', () => {
+    console.log = jest.fn();
+    const wrapper = shallow(<ColorPicker />);
+    wrapper.find('button').at(2).simulate('click');
+    expect(console.log).toHaveBeenCalledWith('blue');
   });
 });
