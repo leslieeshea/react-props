@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Color({ name, hex, rgb }) {
+function Color({ name, hex, red, green, blue }) {
   return (
     <dl>
       <dt>Name</dt>
@@ -11,9 +11,9 @@ function Color({ name, hex, rgb }) {
       <dd>{hex}</dd>
 
       <dt>RGB</dt>
-      <dd>Red - {rgb.red}</dd>
-      <dd>Green - {rgb.green}</dd>
-      <dd>Blue - {rgb.blue}</dd>
+      <dd>Red - {red}</dd>
+      <dd>Green - {green}</dd>
+      <dd>Blue - {blue}</dd>
     </dl>
   );
 }
@@ -21,7 +21,9 @@ function Color({ name, hex, rgb }) {
 Color.propTypes = {
   name: PropTypes.string,
   hex: PropTypes.string.isRequired,
-  rgb: PropTypes.number.isRequired
+  red: PropTypes.number.isRequired,
+  green: PropTypes.number.isRequired,
+  blue: PropTypes.number.isRequired
 };
 
 export default Color;
