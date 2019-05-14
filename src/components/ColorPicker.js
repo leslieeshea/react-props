@@ -1,25 +1,24 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import styles from './ColorPicker.css';
 
-export default class ColorPicker extends PureComponent {
-  state = {
-    color: ''
+export default function ColorPicker() {
+  const redHandler = () => {
+    console.log('red');
   };
 
-  selectColor = color => {
-    this.setState({ color });
-  }
+  const yellowHandler = () => {
+    console.log('yellow');
+  };
 
-  render() {
-    const { color } = this.state;
+  const blueHandler = () => {
+    console.log('blue');
+  };
 
-    return (
-      <section className = {styles.ColorPicker}>
-        <button className={styles.red} onClick={this.selectColor.bind(null, 'red')}>Red</button>
-        <button className={styles.yellow} onClick={() => this.selectColor('yellow')}>Yellow</button>
-        <button className={styles.blue} onClick={() => this.selectColor('blue')}>Blue</button>
-        <div className={styles[color]}></div>
-      </section>
-    );
-  }
+  return (
+    <section className = {styles.ColorPicker}>
+      <button className={styles.red} onClick={redHandler}>Red</button>
+      <button className={styles.yellow} onClick={yellowHandler}>Yellow</button>
+      <button className={styles.blue} onClick={blueHandler}>Blue</button>
+    </section>
+  );
 }
