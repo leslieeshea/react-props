@@ -5,22 +5,39 @@ exports[`Color Component renders a color 1`] = `
   <dt>
     Name
   </dt>
-  <dd />
+  <dd>
+    Red
+    <div
+      style={
+        Object {
+          "backgroundColor": "#FF0000",
+          "display": "inline-block",
+          "height": "0.8em",
+          "width": "0.8em",
+        }
+      }
+    />
+  </dd>
   <dt>
     Hex
   </dt>
-  <dd />
+  <dd>
+    #FF0000
+  </dd>
   <dt>
     RGB
   </dt>
   <dd>
     Red - 
+    255
   </dd>
   <dd>
     Green - 
+    0
   </dd>
   <dd>
     Blue - 
+    0
   </dd>
 </dl>
 `;
