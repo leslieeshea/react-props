@@ -3,10 +3,17 @@ import Header from './Header';
 import Color from './Color';
 
 export default function App() {
+  const name = 'Pearl Violet';
+  const rgb = {
+    red: 134,
+    green: 115,
+    blue: 161
+  };
+
   return (
     <>
       <Header />
-      <Color name="Pearl Violet" hex="#8673A1" red={134} green={115} blue={161}/>
+      <Color name={name} rgb={rgb} />
     </>
   );
 }
